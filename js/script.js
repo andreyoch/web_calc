@@ -8,8 +8,16 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 function operate(operator, numberOne, numberTwo) { }
 
+/*
+Show output as sum of output.value & button.value 
+*/
 function showOutput(e) {
-   let buttonValue = e.target.textContent;
-   output.value += buttonValue;
-   
+   if (e.target.className === 'operand') {
+      if (output.value.length < 8) {
+         console.log(output.value.length)
+         let buttonValue = e.target.textContent;
+         output.value += buttonValue;
+      }
+   }
 }
+
